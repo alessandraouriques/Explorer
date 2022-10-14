@@ -30,6 +30,7 @@ body {
 main { 
   display: grid;
   gap: 3.2rem;
+  animation: downtop 700ms 200ms reverse backwards;
 }
 
 .page {
@@ -40,6 +41,7 @@ main {
 header {
   text-align: center;
   margin: 10rem 0 8rem;
+  animation: topdown 700ms;
 }
 
 header p {
@@ -70,6 +72,7 @@ img {
   height: 41.6rem;
   object-fit: cover;
   border-radius: 6px;
+  transition: all 300ms;
 }
 
 .cards h2 {
@@ -98,3 +101,31 @@ img {
   width: fit-content;
 }
 
+
+/* Animações */
+
+img:hover {
+  transform: scale(1.1);
+  opacity: 0.4;
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Código de animação encurtado, ver no animation do main */
+
+@keyframes downtop { 
+  100% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+}
