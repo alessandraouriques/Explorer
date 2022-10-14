@@ -24,13 +24,28 @@ body {
   background-color: var(--bg-primary);
   color: var(--fc-primary);
   font-size: var(--fs-body);
-  height: 170rem;
 }
 
 main { 
   display: grid;
   gap: 3.2rem;
-  display: grid;
+  margin-bottom: 8.0rem;
+}
+
+main div:nth-child(1) {
+  animation: downtop 700ms 100ms backwards reverse ease-in;
+}
+
+main div:nth-child(2) {
+  animation: downtop 700ms 300ms backwards reverse ease-in;
+}
+
+main div:nth-child(3) {
+  animation: downtop 700ms 500ms backwards reverse ease-in;
+}
+
+main div:nth-child(4) {
+  animation: downtop 700ms 700ms backwards reverse ease-in;
 }
 
 .page {
@@ -38,7 +53,8 @@ main {
   margin: 0 auto;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 930px) {
+  
 :root {
   --fs-heading: 5.6rem;
 }
@@ -46,6 +62,26 @@ main {
   .page {
     max-width: 117rem;
     padding: 0 5rem;
+  }
+
+  main { 
+    grid-template-areas: "A B B" "C C D";
+  }
+
+  main div:nth-child(1) {
+    grid-area: A;
+  }
+  
+  main div:nth-child(2) {
+    grid-area: B;
+  }
+  
+  main div:nth-child(3) {
+    grid-area: C;
+  }
+  
+  main div:nth-child(4) {
+    grid-area: D;
   }
 }
 
@@ -111,18 +147,6 @@ img {
   display: inline-flex;
   align-items: center;
   width: fit-content;
-}
-
-main div:nth-child(1) {
-  animation: downtop 700ms 100ms backwards reverse ease-in;
-}
-
-main div:nth-child(2) {
-  animation: downtop 700ms 300ms backwards reverse ease-in;
-}
-
-main div:nth-child(3) {
-  animation: downtop 700ms 500ms backwards reverse ease-in;
 }
 
 
