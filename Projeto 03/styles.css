@@ -12,6 +12,7 @@
   font-size: 62.5%;
   --fs-body: 1.6rem;
   --fs-heading: 4.0rem;
+  --fs-heading-sm: clamp(3rem, 0.5rem + 3vw, 4rem);
 }
 
 * {
@@ -56,7 +57,7 @@ main div:nth-child(4) {
 header {
   text-align: center;
   margin: 10rem 0 8rem;
-}
+ }
 
 header p {
   color: var(--fc-secondary);
@@ -96,7 +97,7 @@ img {
   bottom: 5.2rem;
   left: 2.8rem;
   font-weight: 800;
-  font-size: 4rem;
+  font-size: var(--fs-heading-sm);
   line-height: 4.8rem;
   display: flex;
   flex-direction: column;
@@ -122,7 +123,7 @@ img {
 
 img:hover {
   transform: scale(1.1);
-  opacity: 0.4;
+  filter: brightness(0.5);
 }
 
 @keyframes topdown {
