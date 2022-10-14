@@ -1,3 +1,18 @@
+/* Variaáveis */
+
+:root {
+  --ff-heading: 'Epilogue', sans-serif; 
+  
+  --hue: 250;
+  --bg-primary: hsl(var(--hue), 22%, 23%);
+  --fc-primary: hsl(var(--hue), 0%, 100%);
+  --fc-secondary: hsl(var(--hue), 50%, 80%);
+
+  font-size: 62.5%;
+  --fs-body: 1.6rem;
+  --fs-heading: 4.0rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,5 +20,28 @@
 }
 
 body {
-  font-family: 'Epilogue', sans-serif;
+  font-family: var(--ff-heading);
+  background-color: var(--bg-primary);
+  color: var(--fc-primary);
+  font-size: var(--fs-body);
+}
+
+header {
+  text-align: center;
+  margin: 10rem 0 8rem;
+}
+
+header p {
+  color: var(--fc-secondary);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 1.7rem;
+  line-height: 3.2rem;
+  font-weight: 400;
+}
+
+header h1 {
+  font-weight: 800;
+  font-size: var(--fs-heading);
+  line-height: 4.8rem;
 }
