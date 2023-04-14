@@ -15,16 +15,18 @@ body {
 
 .page {
   margin: 0 auto;
-  max-width: 1092px;
+  width: 1280px;
+  height: 645px;
+  position: relative;
 }
 
 header {
   display: flex;
   margin-top: 71px;
   width: 1083px;
+  height: 30px;
   justify-content: space-between;
   font-family: 'JetBrains Mono';
-  margin-bottom: 100px;
 }
 
 header img {
@@ -42,4 +44,54 @@ a {
   color: hsla(0, 0%, 100%, 1);
   text-decoration: none;
   font-size: 14px;
+}
+
+a:hover {
+  color: hsla(172, 100%, 37%, 1);
+}
+
+main {
+  display: flex;
+  gap: 77px;
+  width: 1092px;
+  height: 283px;
+  margin: 101px auto 0;
+}
+
+main h1 {
+  font-family: 'JetBrains Mono';
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  color: hsla(0, 0%, 100%, 1);
+}
+
+main h1 span {
+  color:hsla(172, 100%, 37%, 1)
+}
+
+main p {
+  margin-top: 59px;
+  width: 580px;
+  height: 168px;
+}
+
+main p span {
+  color:hsla(172, 100%, 37%, 1);
+}
+
+footer {
+  font-family: 'JetBrains Mono', sans-serif;
+  color: white;
+  width: 568px;
+  height: 55px;
+  margin: 157px auto 0;
+  border-top: solid 1px hsla(172, 100%, 37%, 1);
+  padding-top: 27px;
+}
+
+footer img {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
 }
