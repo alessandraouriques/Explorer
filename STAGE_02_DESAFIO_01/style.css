@@ -4,3 +4,29 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  
+}
+
+.container {
+  max-width: 626px;
+  height: 486px;
+  margin: 64px auto;
+}
+
+.container img {
+  width: 350px;
+  height: auto;
+}
+
+h1 {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 500;
+  line-height: 40px;
+  margin-top: 32px;
+  
+}
+
