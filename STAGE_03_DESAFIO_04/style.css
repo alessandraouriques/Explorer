@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+font-family: 'Poppins';
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+color: #4E4958;
+background: #E5E5E5;
+}
+
+body:before {
+  content: '';
+  width: 100%;
+  height: 465px;
+  background-color: #293241;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+header h1 {
+font-family: 'Staatliches';
+font-weight: 400;
+font-size: 36px;
+line-height: 45px;
+color: #FFFFFF;
+margin-top: 107px;
+}
+
+header h3 {
+height: 46px;
+font-size: 16px;
+color: #FFFFFF;
+font-weight: 400;
+}
+
+.page {
+  width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+form {
+  background-color: white;
+  padding: 31.66px 64px 64px;
+}
+
+.nota {
+  width: 225px;
+  height: 100px;
+  margin: 2px auto;
+  display: flex;
+  position: relative;
+}
+
+.estrelas {
+  display: flex;
+  gap: 5.78px;
+  align-items: center;
+  position: absolute;
+  top: 28.42px;
+  left: 47.48px;
+}
+
+.form-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  width: 100%;
+  height: 133px;
+  background-color: #F67669;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.form-head h2 {
+  font-family: 'Staatliches';
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #FFFFFF;
+}
+
+fieldset {
+  border: none;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.input-wrapper {
+  text-align: left;
+}
