@@ -22,8 +22,9 @@
     <form>
 
       <fieldset>
-        <legend>Informações pessoais</legend>
-
+        <div class="fieldset-wrapper">
+      <legend>Informações pessoais</legend>
+      <div class="input-wrapper">
         <label for="nome">Nome</label>
         <input type="text" id="nome">
 
@@ -35,19 +36,24 @@
 
         <label for="senha">Senha<span>(mínimo de 6 caracteres)</span></label>
         <input type="password" id="senha">
-
+      </div>
+    </div>
       </fieldset>
 
       <fieldset>
-        <legend>Informações do mentor</legend>
-
+        <div class="fieldset-wrapper">
+      <legend>Informações do mentor</legend>
+      <div class="input-wrapper">
         <label for="mentor">Nome do seu mentor</label>
         <input type="text" id="mentor">
+      </div>
+    </div>
       </fieldset>
 
       <fieldset>
+      <div class="fieldset-wrapper">
         <legend>Seus horários disponíveis<span>(só o primeiro nome)</span></legend>
-
+        <div class="input-wrapper">
         <h3>Primeira mentoria</h3>
         <label for="data_01">Data<span>(DD/MM/AAAA)</span></label>
         <input type="date" id="data_01">
@@ -67,6 +73,8 @@
 
         <label for="ate_02">Até</label>
         <input type="time" id="ate_02">
+        </diwv>
+      </div>
       </fieldset>
 
     </form>
