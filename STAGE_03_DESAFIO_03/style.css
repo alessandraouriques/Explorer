@@ -20,6 +20,11 @@ body::before {
   background: #535971;
 }
 
+.page {
+  width: 750px;
+  height: auto;
+  margin: 0 auto;
+}
 
 h1, h3 {
   font-family: 'Staatliches', sans-serif;
@@ -31,6 +36,8 @@ header h1 {
   font-size: 48px;
   line-height: 60px;
   color: #ffffff;
+  margin-top: 140px;
+  
 }
 
 header h2 { 
@@ -39,4 +46,13 @@ header h2 {
   font-size: 20px;
   line-height: 30px;
   color: #ffffff;
+  width: 417px;
+  margin-top: 18px;
+}
+
+form {
+  background-color: #ffffff;
+  margin-top: 58px;
+  padding: 64px;
+  border-radius: 20px 20px 0 0;
 }
