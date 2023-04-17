@@ -22,7 +22,7 @@
       </header>
 
       <main>
-        <form>
+        <form id="my-form">
           <fieldset>
             <div class="fieldset-wrapper">
               <legend>Informações pessoais</legend>
@@ -30,27 +30,27 @@
               <div class="col-2">
               <div class="input-wrapper">
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" />
+                <input type="text" id="nome" required/>
               </div>
               
 
               <div class="input-wrapper">
                 <label for="sobrenome">Sobrenome</label>
-                <input type="text" id="sobrenome" />
+                <input type="text" id="sobrenome" required/>
               </div>
             </div>
 
 
               <div class="input-wrapper">
                 <label for="mail">Email <span>(digite um email válido)</span></label>
-                <input type="email" id="mail" />
+                <input type="email" id="mail" required/>
               </div>
 
               <div class="input-wrapper">
                 <label for="senha"
                   >Senha <span>(mínimo de 6 caracteres)</span></label
                 >
-                <input type="password" id="senha" />
+                <input type="password" id="senha" required minlength="6"/>
               </div>
             </div>
           </fieldset>
@@ -61,7 +61,7 @@
 
               <div class="input-wrapper">
                 <label for="mentor">Nome do seu mentor</label>
-                <input type="text" id="mentor" />
+                <input type="text" id="mentor" required/>
               </div>
             </div>
           </fieldset>
@@ -78,17 +78,17 @@
               <div class="col-3">
               <div class="input-wrapper">
                 <label for="data_01">Data <span>(DD/MM/AAAA)</span></label>
-                <input type="date" id="data_01" />
+                <input type="date" id="data_01" required/>
              </div> 
 
               <div class="input-wrapper">
                 <label for="das_01">Das</label>
-                <input type="time" id="das_01" />
+                <input type="time" id="das_01" required/>
               </div>
 
               <div class="input-wrapper">
                 <label for="ate_01">Até</label>
-                <input type="time" id="ate_01" />
+                <input type="time" id="ate_01" required/>
               </div>
               </div>
             
@@ -99,17 +99,17 @@
 
               <div class="input-wrapper">
                 <label for="data_02">Data <span>(DD/MM/AAAA)</span></label>
-                <input type="date" id="data_01" />
+                <input type="date" id="data_01" required/>
               </div>
 
               <div class="input-wrapper">
                 <label for="das_02">Das</label>
-                <input type="time" id="das_02" />
+                <input type="time" id="das_02" required/>
               </div>
 
               <div class="input-wrapper">
                 <label for="ate_02">Até</label>
-                <input type="time" id="ate_02" />
+                <input type="time" id="ate_02" required/>
               </div>
 
             </div>
@@ -120,7 +120,11 @@
       </main>
 
       <footer>
-        <button>Salvar</button>
+        <input 
+        class="button" 
+        type="submit" 
+        form="my-form"
+        value="Salvar evento"/>
       </footer>
     </div>
   </body>

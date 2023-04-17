@@ -84,6 +84,11 @@ fieldset legend {
   padding-bottom: 16px;
 }
 
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .col-2 {
   display: flex;
   gap: 22px;
@@ -102,11 +107,6 @@ input {
   border-radius: 8px;
   background-color: #FAFAFC;
   padding: 8px;
-}
-
-.input-wrapper {
-  display: flex;
-  flex-direction: column;
 }
 
 form label {
@@ -144,6 +144,24 @@ footer {
   background-color: #535971;
   border-radius: 0px 0px 20px 20px;
   margin-bottom: 30px;
+  display: flex;
+
 }
 
+footer input {
+  width: 608px;
+  height: 55px;
+  font-family: 'Staatliches', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #ffffff;
+  border-radius: 20px;
+  background-color: #FF5374;
+  border: none;
+  margin: auto;
+}
 
+footer input:hover {
+  background-color: #ce405c;
+}
