@@ -19,8 +19,62 @@
 
   <main>
     <form>
-      
+
+      <fieldset>
+        <legend>Informações pessoais</legend>
+
+        <label for="nome">Nome</label>
+        <input type="text" id="nome">
+
+        <label for="sobrenome">Sobrenome</label>
+        <input type="text" id="sobrenome">
+
+        <label for="mail">Email<span>(digite um email válido)</span></label>
+        <input type="email" id="mail">
+
+        <label for="senha">Senha<span>(mínimo de 6 caracteres)</span></label>
+        <input type="password" id="senha">
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Informações do mentor</legend>
+
+        <label for="mentor">Nome do seu mentor</label>
+        <input type="text" id="mentor">
+      </fieldset>
+
+      <fieldset>
+        <legend>Seus horários disponíveis<span>(só o primeiro nome)</span></legend>
+
+        <h2>Primeira mentoria</h2>
+        <label for="data_01">Data<span>(DD/MM/AAAA)</span></label>
+        <input type="date" id="data_01">
+
+        <label for="das_01">Das</label>
+        <input type="time" id="das_01">
+
+        <label for="ate_01">Até</label>
+        <input type="time" id="ate_01">
+
+        <h2>Segunda mentoria</h2>
+        <label for="data_02">Data<span>(DD/MM/AAAA)</span></label>
+        <input type="date" id="data_01">
+
+        <label for="das_02">Das</label>
+        <input type="time" id="das_02">
+
+        <label for="ate_02">Até</label>
+        <input type="time" id="ate_02">
+      </fieldset>
+
     </form>
   </main>
+  
+    <footer>
+      <button> Salvar</button>
+    </footer>
+
+  
 </body>
 </html>
