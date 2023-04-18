@@ -22,9 +22,9 @@
       <img src="img/fundo.svg" alt="desenho de fundo em formato de uma nuvem de diálogo em cor vermelha">
       
     <div class="estrelas">
-      <div class="estrela1"><img src="img/vazio.svg" alt=""></div>
-      <div class="estrela2"><img src="img/vazio.svg" alt=""></div>
-      <div class="estrela3"><img src="img/vazio.svg" alt=""></div>
+      <div class="estrela1"><img src="img/marcado.svg" alt=""></div>
+      <div class="estrela2"><img src="img/marcado.svg" alt=""></div>
+      <div class="estrela3"><img src="img/marcado.svg" alt=""></div>
       <div class="estrela4"><img src="img/vazio.svg" alt=""></div>
       <div class="estrela5"><img src="img/vazio.svg" alt=""></div>
     </div>
@@ -39,10 +39,9 @@
       </div>
 
       <form action="">
-        <div class="fieldset-wrapper">
         
-
-            
+        <fieldset>
+          <div class="fieldset-wrapper">
               <div class="col-2">
                 <div class="input-wrapper">
                 <label for="name">Nome</label>
@@ -51,23 +50,26 @@
                 <div class="input-wrapper">
                 <label for="surname">Sobrenome</label>
                 <input type="text" id="surname" required/>
+                </div>
               </div>
-            </div>
 
             <div class="input-wrapper">
               <label for="email">Email</label>
               <input type="email" id="email" required/>
             </div>
+          </div>
+        </fieldset>
+        
 
-        </div>
-
-        <div class="fieldset-wrapper">
+        
           <fieldset>
+            <div class="fieldset-wrapper">
             <legend>Informações do mentor</legend>
             
             <div class="input-wrapper">
                 <label for="mentor">Selecione quem foi o seu mentor</label>
                 <select id="mentor">
+                  <option value="none"></option>
                   <option value="mayk">Mayk Brito</option>
                   <option value="arnold">Arnold Shwarznegger</option>
                   <option value="chuck">Chuck Norris</option>
@@ -75,17 +77,22 @@
             </div>
             <div class="input-wrapper">
                 <label for="feedback">Feedback sobre o mentor</label>
-                <input type="text" id="feedback"/>
+                <textarea name="feedback" id="" cols="30" rows="10"></textarea>
             </div>
-            <div class="input-wrapper">  
+            
+            <div class="input-wrapper">
+              <div class="checkbox-wrapper"> 
                 <input type="checkbox" id="check"/>
                 <label for="check">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
             </div>
-          </fieldset>
+          </div>
         </div>
+          </fieldset>
+       
 
-        <div class="fieldset-wrapper">
+        
           <fieldset>
+            <div class="fieldset-wrapper">
             <legend> Agendando próxima mentoria</legend>
             
             <div class="col-3">
@@ -104,13 +111,15 @@
               <input type="time" id="to"/>
             </div>
           </div>
-          </div>
-          </fieldset>
+          </div> 
         </div>
+          </fieldset>
+       
 
        <button type="submit">SALVAR</button>
       </form>
     </main>
+  </div>
 </body> 
-</div>
+
 </html>
