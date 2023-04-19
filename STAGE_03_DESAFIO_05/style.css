@@ -133,3 +133,12 @@ main img:hover {
     transform: translateY(0);
   }
 }
+
+@media (min-width: 40em) {
+  
+  body {
+
+  }
+
+  
+}
