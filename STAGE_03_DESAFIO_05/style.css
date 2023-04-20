@@ -14,6 +14,9 @@
   --ff-body: 'Palanquin', sans serif;
   --fs-body: 2.0rem;
 
+  --ff-resp: 'Roboto', sans serif;
+  --fs-resp: 2.4rem;
+
   --pf-color: hsla(0, 0%, 100%, 1);
   --sf-color: hsla(274, 84%, 12%, 1);
   --tf-color: hsla(232, 17%, 35%, 1);
@@ -31,12 +34,14 @@ body {
   text-align: center;
   color: var(--sf-color);
   background-color: var(--sb-color);
+  height: 100%;
 }
 
 header {
-  min-width: 38.4rem;
+  width: 100vw;
   height: 27.9rem;
   background-color: var(--pb-color);
+  margin: 0 auto;
 }
 
 header img {
@@ -59,37 +64,60 @@ header h1 {
   background-color: hsla(275, 18%, 79%, 1);
 }
 
+header p {
+  opacity: 0;
+}
 
 main {
-  max-width: 44rem;
-  margin: 3rem auto 6rem;
+  min-width: 32rem;
+  margin: 3rem 0 6rem;
   display: flex;
   flex-direction: column;
   gap: 6.4rem;
 }
 
 main p {
+  width: 30.2rem;
   line-height: 2.2rem;
   color: var(--sf-color);
+  margin: 0 auto;
 }
 
 .sorvetes {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+  margin: 0 auto;
   animation: downtop 1s;
 }
 
-main img {
-  width: 100%;
+main .cards img {
+  width: 32rem;
+  object-fit: cover;
+  border-radius: 3rem;
   transition: transform 200ms;
 }
 
+.sorvetes div:nth-child(3) {
+  display: none;
+}
+
+.sorvetes div:nth-child(4) {
+  display: none;
+}
+
 .cards {
-  max-width: 44.0rem;
+  max-width: 32.0rem;
   display: flex;
   position: relative;
-  
+}
+
+#two img, #four img, #six img{
+  height: 45rem;
+}
+
+#one img, #three img, #five img {
+  height: 25rem;
 }
 
 main h1 {
@@ -108,6 +136,10 @@ main h1 {
   background-color: hsla(312, 91%, 96%, 1);
   border-radius: 2rem;
   animation: topdown 600ms 0.5s backwards;
+}
+
+footer {
+  display: none;
 }
 
 main img:hover {
@@ -134,11 +166,114 @@ main img:hover {
   }
 }
 
-@media (min-width: 40em) {
-  
-  body {
 
+
+
+
+
+@media (min-width: 1020px) {
+
+
+  body {
+    font-family: var(--ff-resp);
+    display: grid;
+    grid-template-columns: 50rem auto;
+    gap: 8.4rem;
+    width: 100vw;;
+    height: 100vh;
   }
 
+  header {
+    width: 50rem;
+    height: auto;
+  }
+
+  header img {
+    width: 21.44rem;
+  }
   
+  header h1 {
+    height: 7.0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.8rem;
+  }
+  header p {
+    width: 35rem;
+    height: 26.2rem;
+    opacity: 1;
+    font-family: var(--ff-resp);
+    color: var(--pf-color);
+    font-size: var(--fs-resp);
+    font-weight: 400;
+    line-height: 3rem;
+    margin: 5.2rem auto;
+  }
+
+  main {
+    width: 100%;
+    height: auto;
+    margin: auto auto;
+  }
+
+  main p {
+    display: none;
+  }
+
+  main h1 {
+    display: none;
+  }
+
+.sorvetes {
+  width: 105rem;
+  display: grid;
+  gap: 3.2rem;
+  grid-template-areas: "A B C" "D B F" "D E F"
+}
+
+
+.cards img:nth-child(1) {
+  height: 15rem;
+}
+
+.sorvetes div:nth-child(1) {
+  grid-area: A;
+}
+
+.sorvetes div:nth-child(2) {
+  grid-area: B;
+}
+
+.sorvetes div:nth-child(3) {
+  grid-area: C;
+  display: block;
+}
+
+.sorvetes div:nth-child(4) {
+  grid-area: D;
+  display: block;
+}
+
+.sorvetes div:nth-child(5) {
+  grid-area: E;
+}
+
+.sorvetes div:nth-child(6) {
+  grid-area: F;
+}
+
+footer {
+  color: var(--tf-color);
+  display: inline-flex;
+  width: 59.2rem;
+  height: 2.8rem;
+}
+
+footer a {
+  font-weight: bold;
+  color: var(--tf-color);
+  text-decoration: none;
+}
+
 }
