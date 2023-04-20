@@ -138,7 +138,7 @@ main h1 {
   animation: topdown 600ms 0.5s backwards;
 }
 
-footer {
+.footer {
   display: none;
 }
 
@@ -199,6 +199,7 @@ main img:hover {
     align-items: center;
     font-size: 4.8rem;
   }
+
   header p {
     width: 35rem;
     height: 26.2rem;
@@ -232,11 +233,6 @@ main img:hover {
   grid-template-areas: "A B C" "D B F" "D E F"
 }
 
-
-.cards img:nth-child(1) {
-  height: 15rem;
-}
-
 .sorvetes div:nth-child(1) {
   grid-area: A;
 }
@@ -263,14 +259,15 @@ main img:hover {
   grid-area: F;
 }
 
-footer {
+span {
+  display: block;
   color: var(--tf-color);
-  display: inline-flex;
   width: 59.2rem;
   height: 2.8rem;
+  margin: auto auto;
 }
 
-footer a {
+span a {
   font-weight: bold;
   color: var(--tf-color);
   text-decoration: none;
