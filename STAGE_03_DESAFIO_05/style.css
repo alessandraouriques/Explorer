@@ -233,10 +233,6 @@ main img:hover {
   grid-template-areas: "A B C" "D B F" "D E F"
 }
 
-.cards {
-  max-width: 22.0rem;
-}
-
 #two img, #four img, #six img{
   height: 35rem;
 }
@@ -246,7 +242,7 @@ main img:hover {
 }
 
 main .cards img {
-  max-width: 22rem;
+  width: 22rem;
   object-fit: cover;
   border-radius: 3rem;
   transition: transform 200ms;
