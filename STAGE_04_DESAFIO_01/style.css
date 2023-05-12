@@ -1,9 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
 
   /* FONTS */
@@ -22,9 +16,87 @@
   --bg-blue: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
   --bg-grey: hsla(283, 47%, 97%, 1);
 
- 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  
+  font-family: var(--ff);
+  font-size: var(--fs-paragraph);
+  color: var(--fc-secondary);
+  text-align: center;
+}
+
+.page {
+  max-width: 43.0rem;
+  height: auto;
+  margin: 0 auto;
+}
+
+header {
+  width: 43.0rem;
+  height: 67.9rem;
+  background-color: var(--bg-grey);
+}
+
+header img {
+  width: 36.4rem;
+  height: auto;
+  margin-bottom: 1.7rem;
+}
+
+h1 {
+  font-size: var(--fs-titles);
+  color: var(--fc-primary);
+  line-height: 4rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: var(--fs-subtitles);
+  font-weight: 600;
+  margin-bottom: 3.5rem;
+}
+
+header img.arrow {
+  width: 5.859rem;
+}
+
+main {
+  background: var(--bg-blue);
+  width: 43.0rem;
+}
+
+main div.container {
+  margin: 0 auto;
+  padding: 5.6rem 3.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.31rem;
+}
+
+main div.card {
+  background-color: var(--fc-terciary);
+  border-radius: 1.9rem;
+  padding: 2.6rem;
+  text-align: left;
+}
+
+.card img {
+  width: 8rem;
+  margin-bottom: 1.2rem;
+}
+
+.card h1 {
+  margin-bottom: 8px;
+}
+
+.form {
+  max-width: 43rem;
+  height: 56.5rem;
+  background-color: var(--bg-grey);
 }
