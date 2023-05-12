@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  /* FONTS */
+  --ff: 'Mulish', sans-serif;
+
+ /* FONT SIZES */
+  font-size: 62.5%;
+  --fs-titles: 3.2rem;
+  --fs-subtitles: 2rem;
+  --fs-paragraph: 1.6rem;
+
+  /* COLORS */
+  --fc-primary: hsla(320, 69%, 42%, 1);
+  --fc-secondary: hsla(244, 38%, 28%, 1);
+  --fc-terciary: hsla(0, 0%, 100%, 1);
+  --bg-blue: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
+  --bg-grey: hsla(283, 47%, 97%, 1);
+
+ 
+}
+
+body {
+  
+}
