@@ -56,7 +56,7 @@ h1, legend {
   font-weight: 900;
 }
 
-main h2 {
+header h2 {
   font-size: var(--fs-subtitles);
   font-weight: 600;
   margin-bottom: 3.5rem;
@@ -64,6 +64,7 @@ main h2 {
 
 header img.arrow {
   width: 5.859rem;
+
 }
 
 main {
