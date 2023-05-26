@@ -5,9 +5,15 @@
 
  /* FONT SIZES */
   font-size: 62.5%;
-  --fs-titles: 3.2rem;
-  --fs-subtitles: 2rem;
-  --fs-paragraph: 1.6rem;
+  --fs-titles-mobile: clamp(2.5rem, 1.2rem + 5vw, 3.2rem);
+  --fs-subtitles-mobile: clamp(1.5rem, 1rem + 5vw, 2rem);
+  --fs-paragraph-mobile: 1.6rem;
+
+  --fs-titles: clamp(1rem, 3.5rem + 1vw, 8rem);
+  --fs-subtitles: clamp(0.5rem, 1.3rem + 1vw, 3.2rem);
+  --fs-paragraph: clamp(0.5rem, 1rem + 1vw, 1.9rem);
+  --fs-cards-title: clamp(1rem, 2rem + 1vw, 3.5rem);
+  --fs-form-title: 4.2rem;
 
   /* COLORS */
   --fc-primary: hsla(320, 69%, 42%, 1);
@@ -26,57 +32,64 @@
 
 body {
   font-family: var(--ff);
-  font-size: var(--fs-paragraph);
+  font-size: var(--fs-paragraph-mobile);
   color: var(--fc-secondary);
   text-align: center;
 }
 
 .page {
-  max-width: 43.0rem;
+  width: 100vw;
   height: auto;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 header {
-  width: 43.0rem;
+  width: 100vw;
   height: 67.9rem;
   background-color: var(--bg-grey);
 }
 
-header img {
-  width: 36.4rem;
+header img.astronaut {
+  width: clamp(20rem, 100%, 36.4rem);
   height: auto;
   margin-bottom: 1.7rem;
 }
 
 h1, legend {
-  font-size: var(--fs-titles);
+  font-size: var(--fs-titles-mobile);
   color: var(--fc-primary);
   line-height: 4rem;
   font-weight: 900;
 }
 
 header h2 {
-  font-size: var(--fs-subtitles);
+  font-size: var(--fs-subtitles-mobile);
   font-weight: 600;
   margin-bottom: 3.5rem;
 }
 
 header img.arrow {
   width: 5.859rem;
-
+  margin-bottom: 9.3rem;
 }
 
 main {
   background: var(--bg-blue);
-  width: 43.0rem;
+  width: 100vw;
+  height: auto;
 }
 
-main div.container {
+main .container {
+  width: 100vw;
   margin: 0 auto;
   padding: 5.6rem 3.9rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 3.31rem;
 }
 
@@ -101,17 +114,20 @@ main div.card {
 }
 
 .form {
+  display: flex;
+  justify-content: center;
+  align-content: center;
   padding: 7.8rem 4rem;
-  width: 43rem;
+  width: 100vw;
   height: 56.5rem;
   background-color: var(--bg-grey);
 }
 
 fieldset {
+  max-width: 34.8rem;
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
-  text-align: left;
   border: none;
 }
 
@@ -119,11 +135,12 @@ fieldset legend {
   margin-bottom: 3rem;
 }
 
+
 input, textarea {
   font-family: var(--ff);
-  font-size: var(--fs-paragraph);
+  font-size: var(--fs-paragraph-mobile);
   color: var(--fc-secondary);
-  width: 34.8rem;
+  width: 100%;
   height: 4.8rem;
   padding-left: 5rem;
   border: 1.5px solid var(--fc-secondary);
@@ -145,15 +162,20 @@ textarea {
 }
 
 .button {
+  width: 15rem;
   color: var(--fc-terciary);
   font-size: 1.4rem;
   background: var(--bg-blue);
-  width: 15.1rem;
   padding: 0;
+  border: none;
+}
+
+.form img.art{
+  display: none;
 }
 
 footer {
-  width: 43rem;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -166,4 +188,126 @@ footer h2 {
   height: 2rem;
   font-weight: 600;
   font-size: 1.9rem;
+}
+
+
+
+
+@media (min-width: 1024px) {
+
+body {
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--fs-paragraph);
+
+}
+
+.page {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: clamp(50rem, 75rem + 5vh, 83.6rem);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+header img.astronaut {
+  width: clamp(20rem, 55rem + 9vw, 75rem);
+  max-height: clamp(20rem, 60rem + 10vh, 75rem);
+  padding-right: 2.9rem;
+}
+
+header div {
+  width: clamp(20rem, 50rem + 2vw, 70rem);
+  max-height: 100%;
+  margin-top: clamp(10rem, 25rem + 5vh, 31.2rem);
+  margin-left: clamp(1rem, 5rem + 2vw, 10.9rem);
+}
+
+header h1 {
+  font-size: var(--fs-titles);
+  margin-bottom: 8px;
+}
+
+header h2 {
+  font-size: var(--fs-subtitles);
+  margin-bottom: clamp(10rem, 12rem + 2vh, 17.9rem);
+}
+
+header img.arrow {
+  width: 5.8rem;
+  height: 10.5rem;
+}
+
+main {
+  width: 100%;
+  height: auto;
+}
+
+div.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: clamp(0.5rem, 1rem + 1vw, 6rem);
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card {
+  width: 36.6rem;
+  height: clamp(35rem, 40rem + 10vh, 46rem);
+  padding: 3.2rem 3.2rem;
+}
+
+.card h1 {
+  font-size: var(--fs-cards-title);
+  margin-bottom: 2.4rem;
+}
+.card img {
+  width: 9.7rem;
+  margin-bottom: 2.5rem;
+}
+
+.card p {
+  width: clamp(15rem, 24rem + 3vw, 38.1rem);
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 0;
+  padding: 0;
+  background-color: var(--bg-grey);
+}
+
+form {
+  width: 100%;
+}
+
+fieldset {
+  max-width: 60rem;
+  margin-left: clamp(2rem, 7rem + 1vw, 10.9rem);
+}
+
+input, textarea {
+  width: 100%;
+}
+
+.form img.art {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+footer {
+  width: 100%;
+}
+
 }
