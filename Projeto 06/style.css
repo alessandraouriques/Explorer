@@ -1,3 +1,74 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
+  height: 100vh;
+  text-align: center;
   background: linear-gradient(287.56deg, #C2E9FB 0%, #A1C4FD 100%);
+  display: grid;
+  place-items: center;
+}
+
+body, button, input {
+  font-family: 'DM sans', sans-serif;
+  font-size: 1.6rem;
+}
+
+main {
+  width: min(42.8rem, 90%);
+  margin-top: -12rem;
+  background: hsla(0, 0%, 100%, 1);
+  box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
+  border-radius: .6rem;
+  padding: 4.8rem 6.4rem 6.4rem;
+}
+
+main h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+
+main p {
+  font-family: 'DM sans', sans-serif;
+  font-size: 1.6rem;
+  color: hsla(238, 27%, 28%, 0.8);
+  opacity: .8;
+}
+
+h1, p {
+  color: hsla(240, 27%, 28%, 1);
+}
+
+form {
+  margin-top: 4.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+input, button { 
+  border: none;
+  height: 5.3rem;
+}
+
+form input {
+  width: 5rem;
+  color: hsla(238, 27%, 28%, 1);
+  background-color: hsla(212, 23%, 89%, 1);
+  border-radius: 4px 0 0 4px;
+  padding: 1.6rem;
+}
+
+form button {
+  width: 8.2rem;
+  color: white;
+  background-color: hsla(240, 81%, 71%, 1);
+  border-radius: 0 4px 4px 0;
 }
