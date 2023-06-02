@@ -12,7 +12,7 @@ let xAttempts = 1;
 // Eventos
 btnTry.addEventListener('click', handleTryClick);
 btnReset.addEventListener('click', handleResetClick);
-document.addEventListener('keydown', enterReset)
+document.addEventListener('keydown', enterReset);
 
 
 // Função callback
@@ -45,7 +45,7 @@ function handleTryClick(event) {
  
   xAttempts++
   inputNumber.value = ""
-  
+  focus()
 };
 
 function handleResetClick() {
