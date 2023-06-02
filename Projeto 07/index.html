@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora de IMC</title>
+
+  <!-- Fonts & Style -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Scripts -->
+  <script src="main.js" defer></script>
+
 </head>
 <body>
-  <main>
-    <h1>Cálculo de IMC</h1>
-    <form action="">
-      <div class="wrapper">
-        <label for="peso">Peso(kg)</label>
-        <input id="peso" type="number"/>
-      </div>
-      
-      <div class="wrapper">
-        <label for="altura">Altura(m)</label>
-        <input type="number" id="altura"/>
-      </div>
-      <button id="btnCalculate">Calcular IMC</button>
-    </form>
-  </main>
 
-  <script src="main.js"></script>
+  <div class="container">
+
+    <main class="card">
+      <h1 class="title">Cálculo de IMC</h1>
+      
+      <form action="">
+        <div class="input-wrapper">
+          <label for="weight">Peso(kg)</label>
+          <input 
+            id="weight" 
+            type="text"
+            placeholder="60"/>
+        </div>
+        
+        <div class="input-wrapper">
+          <label for="height">Altura(m)</label>
+          <input 
+            id="height" 
+            type="text"
+            placeholder="165"/>
+        </div>
+
+        <button type="submit" id="btnCalculate">
+          Calcular IMC
+          <img src="assets/arrow.svg" alt="seta apontando para a direita"> 
+        </button>
+      </form>
+
+    </main>
+
+  </div>
+
 </body>
 </html>
