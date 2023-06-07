@@ -4,17 +4,19 @@ const form = document.querySelector('form');
 const inputWeight = document.querySelector('#weight');
 const inputHeight = document.querySelector('#height');
 
-const modalWrapper = document.querySelector('.modal-wrapper');
-const modalMessage = document.querySelector('.modal .title span');
-const modalBtnClose = document.querySelector('.modal button.close');
-
+// Colocando tudo dentro de um array 
 const Modal = {
+
+  wrapper: document.querySelector('.modal-wrapper'),
+  message: document.querySelector('.modal .title span'),
+  btnClose: document.querySelector('.modal button.close'),
+
   // Forma moderna de escrita de uma função com nome atribuido 
   open() {
-    modalWrapper.classList.add('open')
+    Modal.wrapper.classList.add('open')
   },
   close() {
-    modalWrapper.classList.remove('open')
+    Modal.wrapper.classList.remove('open')
   }
 }
 
@@ -39,12 +41,12 @@ form.onsubmit = event => {
   const result = IMC(weight, height)
   const message = `Seu IMC é de ${result}` 
 
-  modalMessage.innerText = message
+  Modal.message.innerText = message
   Modal.open()
 };
 
 // Se na arrow function tiver apenas uma linha de código da para tirar as chaves {}
-modalBtnClose.onclick = () => Modal.close();
+Modal.btnClose.onclick = () => Modal.close();
 
 
 function IMC(weight, height) {
