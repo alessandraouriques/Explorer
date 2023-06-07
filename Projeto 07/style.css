@@ -13,7 +13,9 @@
   --bg-color: hsla(230, 78%, 8%, 1);
   --fc-body: hsla(194, 68%, 15%, 1);
   --btn-color: hsla(194, 97%, 31%, 1);
+  --btn-hover: rgb(5, 75, 97);
   --mn-color: hsla(0, 0%, 100%, 1);
+  --al-error: hsla(0, 86%, 59%, 1);
 
 }
 
@@ -50,13 +52,14 @@ body {
 
 .title {
   font-size: var(--fs-titles);
-  margin-bottom: 3.2rem;
 }
 
 form {
   display: flex;
   flex-direction: column;
   font-size: var(--fs-body);
+
+  margin-top: 3.2rem;
 }
 
 .input-wrapper + .input-wrapper {
@@ -71,7 +74,7 @@ form label {
 }
 
 form input {
-  width: 100%;
+  width: 30rem;
   font-family: var(--ff-body);
   font-size: var(--fs-input);
   color: hsla(210, 11%, 15%, 1);
@@ -87,19 +90,99 @@ form input:focus {
 }
 
 form button {
+  width: 100%;
+
   display: flex;
+  padding: 1.6rem;
   gap: 8px;
   align-items: center;
   justify-content: center;
+
   font-family: var(--ff-body);
   font-size: var(--fs-input);
   color: var(--mn-color);
+  font-weight: 700;
+
   background-color: var(--btn-color);
   border: none;
   border-radius: 4px;
-  padding: 1.6rem;
-  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: background .3s;
+}
+
+form button:hover {
+  background-color: var(--btn-hover);
 }
 
 
 
+/* Modal */
+.modal-wrapper.open{
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-wrapper {
+  background: hsla(0, 0%, 0%, 0.7);
+  
+  position: absolute;
+  inset: 0;
+
+  display: grid;
+  place-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  position: relative;
+}
+
+.modal button {
+  background: none;
+  border: none;
+
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  cursor: pointer;
+
+  transition: transform .3s;
+}
+
+.modal button:hover {
+  transform: scale(1.1);
+}
+
+
+/* Alert error */
+.alert-error.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alert-error {
+  background-color: var(--al-error);
+  padding: .8rem 0;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--mn-color);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transform: translateY(-3rem);
+  transition: transform .5s;
+}
