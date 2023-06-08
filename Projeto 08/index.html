@@ -5,7 +5,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Focus Timer</title>
+  <meta name="description" content="Temporizador estilo pomodoro">
+  <title>FocusTimer - Pomodoro</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer type="module"></script>
@@ -13,31 +14,23 @@
 </head>
 <body>
   <main>
-    <div class="time">
-      <div class="minutes"> 
-        25:
-      </div>
-      <div class="seconds">
-        00
-      </div>
+    <div id="timer">
+      <span class="minutes">25</span>
+      <span>:</span>
+      <span class="seconds">00</span>
     </div>
 
-    <div class="buttons">
-      <div class="controls">
-        <img class="button" src="./assets/play-circle.svg" alt="imagem de um botão de play dentro de um círculo">
-        <img class="button hide" src="./assets/pause-circle.svg" alt="imagem de um  botão de pausa dentro de um círculo">
-        <img class="button hide" src="./assets/stop-circle.svg" alt="image de um botão de parar dentro de um círculo">
-      </div>
-
-      <div class="timer">
-        <img src="./assets/stopwatch.svg" alt="imagem de um relógio cronômetro">
-      </div>
-    </div>
-
-    <div class="volume">
-      <img src="./assets/volume-medium.svg" alt="imagem de um altofalante com linhas de som saindo">
-      <img src="./assets/volume-mute.svg" alt="imagem de um alto falante com um xis em cima" class="mute">
+    <div id="controls">
+      <button class="play"><img src="assets/play-circle.svg" alt=""></button>
+      <button class="pause"><img src="assets/pause-circle.svg" alt=""></button>
+      <button class="stop"><img src="assets/stop-circle.svg" alt=""></button>
+      <button class="set"><img src="assets/stopwatch.svg" alt=""></button>  
     </div>
   </main>
+
+  <footer>
+    <button class="sound-on"><img src="assets/volume-medium.svg" alt=""></button>
+    <button class="sound-off"><img src="assets/volume-mute.svg" alt=""></button>
+  </footer>
 </body>
 </html>

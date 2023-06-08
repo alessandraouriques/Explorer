@@ -1,13 +1,21 @@
 :root {
+  font-size: 62.5%;
+
   --ff-body: 'Roboto', sans-serif;
 
   --bg-color: hsla(240, 5%, 7%, 1);
   --bt-color: hsla(194, 100%, 63%, 0.13);
+  --fb-color: hsla(0, 0%, 100%, 1);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--bg-color);
 }
 
