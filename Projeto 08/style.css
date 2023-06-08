@@ -2,10 +2,13 @@
   font-size: 62.5%;
 
   --ff-body: 'Roboto', sans-serif;
+  --fs-body: 8.8rem;
 
   --bg-color: hsla(240, 5%, 7%, 1);
-  --bt-color: hsla(194, 100%, 63%, 0.13);
-  --fb-color: hsla(0, 0%, 100%, 1);
+  --base-color: 194;
+  --primary-color: hsla(var(--base-color), 100%, 63%);
+  --bg-primary-light: hsla(var(--base-color), 100%, 63%, 0.13);
+  --secondary-color: hsla(0, 0%, 100%, 1);
 }
 
 * {
@@ -15,7 +18,32 @@
 }
 
 body {
-  height: 100vh;
+  font-family: var(--ff-body);
+  color: var(--secondary-color);
+
   background-color: var(--bg-color);
 }
+
+button {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+#timer {
+  font-size: var(--fs-body);
+
+  display: flex;
+}
+
+#controls {
+  background-color: var(--bg-primary-light);
+}
+
+
 
