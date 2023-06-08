@@ -1,8 +1,9 @@
 // Import & expport
 
   import { Modal } from './modal.js'
+  import { AlertError } from './alert-error.js'
 
-// Variáveis
+  // Variáveis
 
 const form = document.querySelector('form');
 const inputWeight = document.querySelector('#weight');
@@ -24,7 +25,18 @@ form.onsubmit = event => {
   const weight = inputWeight.value
   const height = inputHeight.value
 
- 
+// Lógica para validar se é número ou não os valores da altura e peso
+  const showAlertError = notANumber(weight) || notANumber(height)
+
+  if (showAlertError) {
+    AlertError.open()
+    return; // se coloca o return aqui para que o navegador não continue a leitura do código caso entrar aqui
+  }
+
+  AlertError.close()
+
+//
+
   const result = IMC(weight, height)
   const message = `Seu IMC é de ${result}` 
 
@@ -35,3 +47,10 @@ form.onsubmit = event => {
 function IMC(weight, height) {
   return (weight / ((height / 100) **2)).toFixed(2)
 };
+
+
+// VALIDANDO DADOS
+
+function notANumber(value) {
+  return isNaN(value) || value == "" // É colocado || OU "" vazio pois o isNaN considera que um valor vazio é um número e vai sair false na verificação se não é um número
+}
