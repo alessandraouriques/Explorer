@@ -1,0 +1,13 @@
+:root {
+  --ff-body: 'Roboto', sans-serif;
+
+  --bg-color: hsla(240, 5%, 7%, 1);
+  --bt-color: hsla(194, 100%, 63%, 0.13);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
