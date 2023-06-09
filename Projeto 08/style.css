@@ -18,10 +18,15 @@
 }
 
 body {
+  min-width: 100vw;
+  min-height: 100vh;
+
   font-family: var(--ff-body);
   color: var(--secondary-color);
 
   background-color: var(--bg-color);
+
+  display: grid;
 }
 
 button {
@@ -35,14 +40,49 @@ button {
   display: none;
 }
 
+.play svg path,
+.pause svg path,
+.stop svg path {
+  fill: var(--primary-color);
+}
+
+button svg {
+  width: clamp(1rem, 2rem + 12vw, 6.4rem);
+}
+
+main {
+  justify-self: center;
+  align-self: end;
+}
+
 #timer {
-  font-size: var(--fs-body);
+  font-size: clamp(4rem, 4rem + 10vw, var(--fs-body));
+  margin-bottom: 1.6rem;
 
   display: flex;
 }
 
 #controls {
+  width: clamp(10rem, 10rem + 30vw, 22.8rem);
+  height: clamp(8rem, 5rem + 10vw, 10.8rem) ;
+
   background-color: var(--bg-primary-light);
+
+  display: flex;
+  gap: 3.2rem;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 999px;
+}
+
+footer {
+  justify-self: end;
+  align-self: end;
+}
+
+footer button {
+  margin: 3.2rem 4rem;
 }
 
 
