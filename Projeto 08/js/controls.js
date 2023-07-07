@@ -55,7 +55,9 @@ export function Controls({
     handlePlay,
     handlePause,
     handleStop,
-    getMinutes
+    getMinutes,
+    handleSoundOn,
+    handleSoundOff
   }
   
 }

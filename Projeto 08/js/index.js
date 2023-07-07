@@ -1,6 +1,9 @@
 import { Timer } from "./timer.js"
 import { Controls } from "./controls.js"
 import { elements } from "./elements.js"
+import Sound from "./sounds.js"
+
+const sound = Sound()
 
 const {
   btnPlay,
@@ -28,21 +31,22 @@ const timer = Timer({
   resetControls: controls.resetControls
 })
 
-
-
 btnPlay.addEventListener('click', function() {
   controls.handlePlay()
   timer.countdown()
+  sound.pressButton()
 });
 
 btnPause.addEventListener('click', function() {
   controls.handlePause()
   timer.hold()
+  sound.pressButton()
 }); 
 
 btnStop.addEventListener('click', function() {
   controls.handleStop()
   timer.resetTimer()
+  sound.pressButton()
 });
 
 btnSet.addEventListener('click', function() {
@@ -57,7 +61,14 @@ btnSet.addEventListener('click', function() {
   timer.updateMinutes(newMinutes)
 })
 
-btnSoundOn.addEventListener('click', Controls.handleSoundOn);
-btnSoundOff.addEventListener('click', Controls.handleSoundOff);
+btnSoundOn.addEventListener('click', function() {
+  controls.handleSoundOn()
+  sound.bgAudio.play()
+});
+
+btnSoundOff.addEventListener('click', function() {
+  controls.handleSoundOff()
+  sound.bgAudio.pause()
+});
 
 
