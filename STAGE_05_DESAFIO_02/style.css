@@ -33,7 +33,7 @@ button {
   cursor: pointer;
 }
 
-button:focus svg path {
+#controls button:active svg path {
   fill: var(--terciary-color);
 }
 
