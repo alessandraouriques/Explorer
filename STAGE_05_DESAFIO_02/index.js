@@ -13,13 +13,15 @@ let minutes = Number(minutesDisplay.textContent);
 let seconds = Number(secondsDisplay.textContent);
 
 
-function incrementMinutes() {
-  let increment = 5
-  let newMinutes = minutes + increment
-  minutesDisplay.textContent = newMinutes
-  return
+function addMinutes(minutes) {
+  minutes = minutes + 5
+  return minutes
 }
-
+ 
+function subMinutes(minutes) {
+  minutes = minutes - 5
+  return minutes
+}
 
 play.addEventListener('click', function() {
 
@@ -27,18 +29,31 @@ play.addEventListener('click', function() {
 
 stop.addEventListener('click', function() {
   
-})
+}) 
 
 add.addEventListener('click', function() {
-  incrementMinutes()
+  if(minutes >= 0 && minutes <= 59) {
+    minutes = addMinutes(minutes)
+  }
+  else if(minutes >= 60){
+    return
+  }
+  minutesDisplay.textContent = String(minutes).padStart(2, "0") 
 })
 
 sub.addEventListener('click', function() {
-  
+  if (minutes >= 6){
+    minutes = subMinutes(minutes)
+  }
+  else if(minutes <= 5) {
+    return
+  }
+  minutesDisplay.textContent = String(minutes).padStart(2, "0")
 })
 
 forest.addEventListener('click', function() {
-  
+  forest.style.background = '#02799D'
+  forest.setAttribute("fill", "#02799D")
 })
 
 rain.addEventListener('click', function() {
