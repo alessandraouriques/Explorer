@@ -42,15 +42,14 @@ button {
   height: 15.2rem;
 
   background-color: var(--secondary-color);
-
   border-radius: 2.4rem;
 }
 
-#sounds button:focus {
+#sounds button.on {
   background-color: var(--terciary-color);
 }
 
-#sounds button:focus svg path {
+#sounds button svg.whitePath path  {
   fill: var(--white-color)
 }
 
@@ -87,5 +86,6 @@ main {
   max-width: 30.8rem;
   max-height: 33.6rem;
 }
+
 
 
