@@ -23,54 +23,78 @@ const fireIcon = document.querySelector('#sounds').getElementsByTagName('svg')[3
 let minutes = Number(minutesDisplay.textContent);
 let seconds = Number(secondsDisplay.textContent);
 
-console.log(minutes)
 
 
-function addMinutes(minutes) {
-  minutes = minutes + 5
+function addMinutes() {
+  if(minutes >= 0 && minutes <= 59) {
+    minutes = minutes + 5
+  }
   return minutes
 }
 
-function subMinutes(minutes) {
-  minutes = minutes - 5
+function subMinutes() {
+  if (minutes >= 6){
+    minutes = minutes - 5
+  }
   return minutes
 }
+
+function countDown(newMinutes, newSeconds) {
+  let timerTimeOut;
+  newMinutes = Number(minutesDisplay.textContent);
+  newSeconds = Number(secondsDisplay.textContent);
+  
+  
+  function resetTimer() {
+    minutesDisplay.textContent = String(minutes).padStart(2, "0")
+    secondsDisplay.textContent = String(seconds).padStart(2, "0") 
+    clearTimeout(timerTimeOut)
+  }
+  
+  timerTimeOut = setTimeout(function() {
+    let isFinished = newMinutes <= 0 && newSeconds <= 0
+    
+
+    if(isFinished){
+      resetTimer()
+      return
+    }
+    
+    if(newSeconds <= 0) {
+      newSeconds = 60
+      --newMinutes
+    }
+    
+    newSeconds = newSeconds - 1
+    
+    secondsDisplay.textContent = String(newSeconds).padStart(2, "0")
+    minutesDisplay.textContent = String(newMinutes).padStart(2, "0")
+    
+    countDown()
+  }, 1000)
+  
+
+  return
+  
+}
+
 
 play.addEventListener('click', function() {
-  focus()
-  countdown(minutes, seconds)
+  countDown(minutes, seconds)
 })
 
 stop.addEventListener('click', function() {
-  
+  resetTimer()
 }) 
 
 add.addEventListener('click', function() {
-  if(minutes >= 0 && minutes <= 59) {
-    minutes = addMinutes(minutes)
-  }
-  else if(minutes >= 60){
-    return
-  }
-  minutesDisplay.textContent = String(minutes).padStart(2, "0") 
+  minutesDisplay.textContent = addMinutes()
 })
 
 sub.addEventListener('click', function() {
-  if (minutes >= 6){
-    minutes = subMinutes(minutes)
-  }
-  else if(minutes <= 5) {
-    return
-  }
-  
-  minutesDisplay.textContent = String(minutes).padStart(2, "0")
+  minutesDisplay.textContent = String(subMinutes()).padStart(2,"0")
 })
 
-
-
-setTimeout(function(){
-
-})
 
 
 forestBtn.addEventListener('click', function() {
