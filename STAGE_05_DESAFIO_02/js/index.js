@@ -23,8 +23,6 @@ const fireIcon = document.querySelector('#sounds').getElementsByTagName('svg')[3
 let minutes = Number(minutesDisplay.textContent);
 let seconds = Number(secondsDisplay.textContent);
 
-
-
 function addMinutes() {
   if(minutes >= 0 && minutes <= 59) {
     minutes = minutes + 5
