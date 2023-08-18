@@ -5,7 +5,6 @@ export function Timer({
   seconds
 }) {
 
-
 function countDown(newMinutes, newSeconds) {
   let timerTimeOut;
   newMinutes = Number(minutesDisplay.textContent);
