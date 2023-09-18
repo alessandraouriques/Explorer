@@ -50,32 +50,36 @@ para demonstrar em qual página nos encontramos:
     clicado. 
 */
 
-  
 
-const home = document.querySelector("#home");
-const about = document.querySelector("#about");
-const contact = document.querySelector("#contact");
-const error = document.querySelector("#error");
+    const routes = {
+      "/": "/pages/home.html",
+      "/about": "/pages/about.html",
+      "/contact": "/pages/contact.html",
+      404: "/pages/404.html",
+    }
 
-const routes = {
-  "/": "/pages/home.html",
-  "/about": "/pages/about.html",
-  "/contact": "/pages/contact.html",
-  404: "/pages/404.html",
-}
+    function route(event) {
+      event = event || window.event
+      event.preventDefault()
 
-function route(event) {
-  event = event || window.event //verificação se eu passei um evento, se não passei pega o evento geral da janela = window.event (que sería no caso redirecionar)
-  event.preventDefault() // evito o padrão de redirecionar quando o <a> tem um href 
+      window.history.pushState({}, "", event.target.href)
 
-  window.history.pushState({}, "", event.target.href)
+      handle()
+    }
 
-  handle()
-}
+    function handle() {
+      const { pathname }  = window.location
+      const route = routes[pathname] || routes[404]
+      fetch(route)
+      .then(data => data.text())
+      .then(html => {
+        document.querySelector('#app').innerHTML = html
+      })
+    }
 
-function handle() {
-  const { pathname } = window.location
-}
+    handle()
 
-home.addEventListener('click', route())
+    window.onpopstate = () => handle()
+    window.route = () => route()
+
 

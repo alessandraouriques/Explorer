@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +7,14 @@
 </head>
 <body>
   <nav>
-    <a id="home" href="/">Home</a>
-    <a id="about" href="/about">Sobre</a>
-    <a id="contact" href="/contact">Contato</a>
-    <a id="error" href="/404">404</a>   
+    <a href="/" onclick="route()">Home</a>
+    <a href="/about" onclick="route()">Sobre</a>
+    <a href="/contact" onclick="route()">Contato</a>
+    <a href="/404" onclick="route()">404</a>   
   </nav>
   
-  <div class="page"></div>
+  <div id="app"></div>
 
-  <script src="./preventdefault.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
